@@ -285,7 +285,7 @@
     it('with valid name', function() {
       reqMock = {
         query: {
-          name: "Wellington"
+          name: 'Wellington'
         }
       };
 

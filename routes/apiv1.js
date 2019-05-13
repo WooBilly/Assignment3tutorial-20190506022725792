@@ -17,7 +17,7 @@ exports.getWeather = function(req, res) {
 	*/
 exports.getWeather = function(req, res) {
 	var name = req.query.name;
-	if( (name === null) || (typeof(name) === 'undefined') ) {
+	if( name === null  ) {
 		return res.status(400).send('name missing');
 	}
 
@@ -54,7 +54,7 @@ exports.getWeather2 = function(req, res) {
 */	
 exports.getWeather2 = function(req, res) {
 	var name = req.query.name;
-	if( (name === null) || (typeof(name) === 'undefined') ) {
+	if( (name === null) || (typeof name === 'undefined') ) {
 		return res.status(400).send('name missing');
 	}
 
