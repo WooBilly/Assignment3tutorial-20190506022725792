@@ -52,6 +52,7 @@ exports.getWeather2 = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 */	
+/*
 exports.getWeather2 = function(req, res) {
 	var name = req.query.name;
 	if( (name === null)  || (typeof name === 'undefined')) {
@@ -81,6 +82,7 @@ exports.getWeather2 = function(req, res) {
 
 };
 router.get('/getWeather2', exports.getWeather2);
+*/
 
 
 exports.router = router;

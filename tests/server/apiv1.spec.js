@@ -316,7 +316,7 @@
     });
   });
 
-  
+  /*
   describe('Get Weather 2', function() {
 
     it('with without name', function() {
@@ -401,6 +401,6 @@
       assert(resMock.send.lastCall.args[0].city === 'Wellington', 'Unexpected response:' + resMock.send.lastCall.args[0].city);
       assert(resMock.send.lastCall.args[0].weather === 'Conditions are cold and temperature is 78 F', 'Unexpected response:' + resMock.send.lastCall.args[0].weather);
     });
-  });
+  });*/
   
 }());
