@@ -15,7 +15,6 @@ exports.getWeather = function(req, res) {
 		return res.status(400).send('zip missing');
 	}
 	*/
-
 exports.getWeather = function(req, res) {
 	var name = req.query.name;
 	if( (name === null) || (typeof(name) === 'undefined') ) {
