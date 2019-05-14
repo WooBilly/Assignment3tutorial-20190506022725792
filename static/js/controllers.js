@@ -40,13 +40,13 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         
         var data = "";
         if(which === 1) {
-            data = $scope.name1m;
+            data = $scope.name1;
         } else if(which === 2) {
-            data = $scope.name2m;
+            data = $scope.name2;
         } else if(which === 3) {
-            data = $scope.name3m;
+            data = $scope.name3;
         } else if(which === 4) {
-            data = $scope.name4m;
+            data = $scope.name4;
         } 
 		/*
         if(data.length === 4) {
@@ -87,7 +87,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
        if(data.length > 0) {
             $http({
                 method: "GET",
-                url: '/api/v1/getWeather?zip=' + data
+                url: '/api/v1/getWeather?q=' + data
             }).then( function(response) {
                 if(which === 1) {
                     $scope.name1City = response.data.city;
