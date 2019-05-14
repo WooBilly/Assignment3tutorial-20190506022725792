@@ -40,13 +40,13 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         
         var data = "";
         if(which === 1) {
-            data = $scope.name1;
+            data = $scope.name1m;
         } else if(which === 2) {
-            data = $scope.name2;
+            data = $scope.name2m;
         } else if(which === 3) {
-            data = $scope.name3;
+            data = $scope.name3m;
         } else if(which === 4) {
-            data = $scope.name4;
+            data = $scope.name4m;
         } 
 		/*
         if(data.length === 4) {
