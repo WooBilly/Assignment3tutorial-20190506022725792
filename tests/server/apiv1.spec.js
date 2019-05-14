@@ -247,7 +247,7 @@
     it('with valid name and error from request call', function() {
       reqMock = {
         query: {
-          name: "Wellington"
+          name: 'Wellington'
         }
       };
 
@@ -266,7 +266,7 @@
     it('with incomplete name', function() {
       reqMock = {
         query: {
-          name: "Wellington"
+          name: 'Wellington'
         }
       };
 
@@ -285,7 +285,7 @@
     it('with valid name', function() {
       reqMock = {
         query: {
-          name: "Wellington"
+          name: 'Wellington'
         }
       };
 
