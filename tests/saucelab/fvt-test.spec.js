@@ -153,7 +153,7 @@
     });
 
     it("Enter name and check output - 1", function(done) {
-      driver.findElement(webdriver.By.id('name1')).sendKeys('Wellington');
+      driver.findElement(webdriver.By.id('name1')).sendKeys('6011');
       driver.findElement(webdriver.By.id('name1city')).getText().then(function(text) {
         assert.equal(text, ' Wellington');
         done();
@@ -161,7 +161,7 @@
     });
 
     it("Enter name and check output - 2", function(done) {
-      driver.findElement(webdriver.By.id('name4')).sendKeys('Wellington');
+      driver.findElement(webdriver.By.id('name4')).sendKeys('6011');
       driver.findElement(webdriver.By.id('name4city')).getText().then(function(text) {
         assert.equal(text, ' Wellington');
         done();
