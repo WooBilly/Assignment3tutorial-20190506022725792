@@ -19,25 +19,20 @@
         <div id="map"></div>
     		<script>
       		var map;
+      		var marker1;
+          	var geocoder =  new google.maps.Geocoder();
      		function initMap() {
      		   	map = new google.maps.Map(document.getElementById('map'), {
        		   	center: {lat: -37.786866, lng: 175.318073},
           		zoom: 10
-
         		});
-     		}
-     		function createMark(){
-     			var pos = {-37.786866, lng: 175.318073};
-          		var marker = new google.maps.Marker({position: pos, map: map});
-          		var geocoder =  new google.maps.Geocoder();
-    			geocoder.geocode( { 'address': 'wellington, nz'}, function(results, status) {
-          		if (status == google.maps.GeocoderStatus.OK) {
-            		alert("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng()); 
-        	  	} else {
-            		alert("Something got wrong " + status);
-          		}
-       		});
-     		}
+        		geocoder.geocode({'address': "Wellington,nz"}, function(results,status){
+        			if (status == google.maps.GeocoderStatus.OK){
+        				var marker1 = new google.maps.Marker({position: results[0].geometry.location});
+						marker1.setMap(map);
+					}
+				}
+			}
     		</script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI46l5ThhLsy8cali5JprGNsn6PPoY_y0&callback=initMap"
     async defer></script>
