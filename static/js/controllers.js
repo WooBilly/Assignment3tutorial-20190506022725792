@@ -96,8 +96,6 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
                     $scope.zip1Weather = response.data.weather;
                     $scope.zip1Lat = response.data.latitude;
                     $scope.zip1Lng = response.data.longitude;
-                    var pos = {lat: zip1Lat, lng: zip1Lng};
-          			var marker = new google.maps.Marker({position: pos, map: map});
                 } else if(which === 2) {
                     $scope.zip2City = response.data.city;
                     $scope.zip2Weather = response.data.weather;
