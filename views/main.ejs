@@ -15,17 +15,26 @@
         <div float="left">
             <% include includes/mainbody %>
         </div>
-        <div float="left" style="width:70%; height:70%">
-        <div id="map"></div>
-    		<script>
+        <div float="left" >
+        <div id="map" style="width:70%; height:70%" ></div>
+    	</div>
+    </body>
+
+    <script>
+         angular.element(document).ready(function() {
+            angular.bootstrap(document, ['ConsoleModule']);
+        });
+    </script>
+    
+    <script>
       		var map;
       		var marker1;
           	var geocoder;
      		function initMap() {
      			geocoder = new google.maps.Geocoder();
      		   	map = new google.maps.Map(document.getElementById('map'), {
-       		   	center: {lat: -37.786866, lng: 175.318073},
-          		zoom: 10
+       		   	 center: {lat: -37.786866, lng: 175.318073},
+          	 	zoom: 10
         		});
         		geocoder.geocode({'address': "Wellington,nz"}, function(results,status){
         			if (status == google.maps.GeocoderStatus.OK){
@@ -37,13 +46,5 @@
     		</script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI46l5ThhLsy8cali5JprGNsn6PPoY_y0&callback=initMap"
     async defer></script>
-    </div>
-    </body>
-
-    <script>
-         angular.element(document).ready(function() {
-            angular.bootstrap(document, ['ConsoleModule']);
-        });
-    </script>
 
 </html>
