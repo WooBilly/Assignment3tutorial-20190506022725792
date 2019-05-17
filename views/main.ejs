@@ -24,11 +24,9 @@
         });
     </script>
     
-    <script>
+    		<script>
       		var map;
-      		var marker1;
           	var geocoder;
-          	var location;
      		function initMap() {
      			geocoder = new google.maps.Geocoder();
      		   	map = new google.maps.Map(document.getElementById('map'), {
@@ -37,10 +35,10 @@
         		});
 			}
 			function createMark(){
-				location = document.getElementById('zip1').value;
-				geocoder.geocode({'address': location + ', NZ'}, function(results,status){
+				var city = document.getElementById('zip1').value;
+				geocoder.geocode({'address': city + ', NZ'}, function(results,status){
         			if (status == "OK"){
-        				marker1 = new google.maps.Marker({position: results[0].geometry.location});
+        				var marker1 = new google.maps.Marker({position: results[0].geometry.location});
 						marker1.setMap(map);
 					}
 				});
