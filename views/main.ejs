@@ -38,9 +38,9 @@
 			}
 			function createMark(){
 				location = document.getElementbyId('zip1').value;
-				geocoder.geocode({'address': location, 'nz'}, function(results,status){
+				geocoder.geocode({'address': location + ', NZ'}, function(results,status){
         			if (status == "OK"){
-        				var marker1 = new google.maps.Marker({position: results[0].geometry.location});
+        				marker1 = new google.maps.Marker({position: results[0].geometry.location});
 						marker1.setMap(map);
 					}
 				});
