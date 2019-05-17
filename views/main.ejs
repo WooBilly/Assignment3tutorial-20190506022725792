@@ -27,6 +27,7 @@
     		<script>
       		var map;
           	var geocoder;
+          	int i = 0;
      		function initMap() {
      			geocoder = new google.maps.Geocoder();
      		   	map = new google.maps.Map(document.getElementById('map'), {
@@ -35,7 +36,6 @@
         		});
 			}
 			function createMark(){
-				int i = 0;
 				if (i > 0){
 					marker1.setMap(null);
 				}
@@ -44,6 +44,7 @@
         			if (status == "OK"){
         				var marker1 = new google.maps.Marker({position: results[0].geometry.location});
 						marker1.setMap(map);
+						i++;
 					}
 				});
 			}
