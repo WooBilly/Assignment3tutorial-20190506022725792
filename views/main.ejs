@@ -35,11 +35,42 @@
         		});
 			}
 			function createMark(){
+				int i = 0;
+				if (i > 0){
+					marker1.setMap(null);
+				}
 				var city = document.getElementById('zip1').value;
 				geocoder.geocode({'address': city + ', NZ'}, function(results,status){
         			if (status == "OK"){
         				var marker1 = new google.maps.Marker({position: results[0].geometry.location});
 						marker1.setMap(map);
+					}
+				});
+			}
+			function createMark2(){
+				var city = document.getElementById('zip2').value;
+				geocoder.geocode({'address': city + ', NZ'}, function(results,status){
+        			if (status == "OK"){
+        				var marker2 = new google.maps.Marker({position: results[0].geometry.location});
+						marker2.setMap(map);
+					}
+				});
+			}
+			function createMark3(){
+				var city = document.getElementById('zip3').value;
+				geocoder.geocode({'address': city + ', NZ'}, function(results,status){
+        			if (status == "OK"){
+        				var marker3 = new google.maps.Marker({position: results[0].geometry.location});
+						marker3.setMap(map);
+					}
+				});
+			}
+			function createMark4(){
+				var city = document.getElementById('zip4').value;
+				geocoder.geocode({'address': city + ', NZ'}, function(results,status){
+        			if (status == "OK"){
+        				var marker4 = new google.maps.Marker({position: results[0].geometry.location});
+						marker4.setMap(map);
 					}
 				});
 			}
